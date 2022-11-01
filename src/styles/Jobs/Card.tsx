@@ -8,10 +8,6 @@ const Container = styled.article<{isSelected: boolean}>`
 	padding: 20px 16px 12px 16px;
 	background-color: ${props => props.isSelected ?  props.theme.colors.selected : props.theme.colors.third};
 	cursor: pointer;
-
-	
-
-
 `;
 
 const ImageContainer = styled.div<{url: string}>`
