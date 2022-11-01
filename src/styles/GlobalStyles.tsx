@@ -1,17 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
+//Creating a new global styles that resets some default css configs 
 const GlobalStyles = createGlobalStyle`
 	*{
 		margin: 0;
 		padding: 0;
 		line-height: 1;
 		border: 0;
+		box-sizing: border-box;
 	}
 
 
 	body{
-		/*padding: 0 85px 0 85px*/
+		font-family: ${props => props.theme.font}
 	}
+
 	
 `;
 

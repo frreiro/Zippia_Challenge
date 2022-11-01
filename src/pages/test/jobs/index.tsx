@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link.js'
 import Card from '../../../components/Jobs/Card'
 import Container from '../../../styles/Jobs'
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
 	<Container>
 		<Head>
 			<title>Home</title>
+
 		</Head>
 
 		<h1>

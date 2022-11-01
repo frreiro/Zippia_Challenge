@@ -1,11 +1,13 @@
 import { ThemeProvider } from "styled-components";
 import { PropsWithChildren } from "react";
+
+//Creating a custom theme to my app
 const theme = {
 	colors: {
-		header: '#343A40',
-		selected: ' rgba(131, 121, 243, 0.1)',
-		primary: '#FFFFFF',
+		primary: '#343A40',
 		secondary: '#949494',
+		third: '#FFFFFF',
+		selected: ' rgba(131, 121, 243, 0.1)',
 		border: '#8D8D8D',
 		divider: '#D9D9D9'
 	},
@@ -23,6 +25,8 @@ const theme = {
 	}
 
 }
+
+//Creating a new component with ThemeProvider that includes all children components
 const Theme: React.FC<PropsWithChildren> = ({ children }) => {
 	return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
