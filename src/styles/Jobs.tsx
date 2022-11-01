@@ -1,10 +1,7 @@
 import styled from "styled-components"
+
 const Container = styled.div`
-	h1{
-		color: red;
-	}
-
-
+	padding: 0 23px 0 23px;
 `;
 
 export default Container
