@@ -1,7 +1,6 @@
 import { useState } from "react"
 import {Container, Subtitle, Title, Subtitle2, ImageContainer, BasicInfo, DetailInfo, DescriptionTitle, DescriptionBody} from "../../styles/Jobs/Card"
 import { ICard } from "../interfaces/card.interfaces"
-import { IJob } from "../interfaces/jobs.interfaces"
 
 
 /*Create the Card compoenente, inside has the JobTile, CompanyName and the companyImage.

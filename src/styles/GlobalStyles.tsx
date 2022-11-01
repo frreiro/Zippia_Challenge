@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
 
 
 	body{
-		font-family: ${props => props.theme.font}
+		font-family: ${props => props.theme.font};
 	}
 
 	

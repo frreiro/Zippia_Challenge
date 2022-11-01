@@ -5,6 +5,7 @@ export interface IJob {
 	companyName: string,
 	location: string,
 	jobDescription: string,
+	companyID: number;
 }
 
 export interface IJobsData {
