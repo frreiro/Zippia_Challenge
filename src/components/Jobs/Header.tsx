@@ -1,6 +1,10 @@
-
+import { Container } from "../../styles/Jobs/Header";
 const Header: React.FC = () => {
-	return <h1>opa</h1>
+	return (
+		<Container>
+			<h1>ZIPPIA, INC</h1>
+		</Container>
+	)
 }
 
 export default Header;
