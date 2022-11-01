@@ -1,13 +1,19 @@
 import styled from "styled-components"
 
 
-const Container = styled.article<{isSelected: boolean}>`
+const Container = styled.li<{isSelected: boolean}>`
 	height: ${props => props.isSelected ? '331px' : '92px'};
 	border-radius: 10px;
 	border: 1px solid ${props => props.theme.colors.border};
 	padding: 20px 16px 12px 16px;
 	background-color: ${props => props.isSelected ?  props.theme.colors.selected : props.theme.colors.third};
 	cursor: pointer;
+	margin-bottom: 20px;
+
+	hr{
+		margin: 12px 0 12px 0;
+		border: 1px solid ${props => props.theme.colors.divider};
+	}
 `;
 
 const ImageContainer = styled.div<{url: string}>`
@@ -21,7 +27,7 @@ const Title = styled.h1`
 	font-size: ${props => props.theme.fontSizes.mobile.large};
 	color: ${props => props.theme.colors.primary};
 	font-weight: 600;
-	line-height: 25px;
+	margin-bottom: 3px;
 `;
 
 const Subtitle = styled.h4`
@@ -50,14 +56,12 @@ const BasicInfo = styled.div`
 `;
 
 const DetailInfo = styled.div`
-	padding-top: 35px;
-	hr{
-		margin: 12px 0 12px 0;
-		border: 1px solid ${props => props.theme.colors.divider};
-	}
-`;
+	overflow-y: scroll;
+	height: 55%;
+	`;
 
 const DescriptionTitle = styled(Title)`
+	padding-top: 25px;
 	font-size: ${props => props.theme.fontSizes.mobile.medium};
 `;
 
