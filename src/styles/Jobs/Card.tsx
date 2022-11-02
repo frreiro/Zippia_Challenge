@@ -2,6 +2,8 @@ import styled from "styled-components"
 
 
 const Container = styled.li<{isSelected: boolean}>`
+
+	width: 368px;
 	height: ${props => props.isSelected ? '331px' : '92px'};
 	border-radius: 10px;
 	border: 1px solid ${props => props.theme.colors.border};
@@ -14,7 +16,26 @@ const Container = styled.li<{isSelected: boolean}>`
 		margin: 12px 0 12px 0;
 		border: 1px solid ${props => props.theme.colors.divider};
 	}
+
+	&.large-card{ 
+		display: none;
+		width: 605px;
+		height: 331px;
+		
+		margin-left: 20px;
+	}
+
+	@media(min-width: 700px ){
+		height: 92px;
+
+		&.large-card{
+			display: block;
+		}
+
+
+	}
 `;
+
 
 const ImageContainer = styled.div<{url: string}>`
 	width: 42px;

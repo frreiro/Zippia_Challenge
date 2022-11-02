@@ -1,15 +1,26 @@
-import { useRef, useState } from "react"
+import {useState } from "react"
 import Dropdown from "rc-dropdown"
 
 import {Container, DropItem, DropMenu} from "../styles/Jobs/Button"
 import { SelectEventHandler } from "rc-menu/lib/interface.js";
 import { IoChevronDownOutline, IoChevronUpOutline } from "react-icons/io5";
 import { IFilterButton } from "./interfaces/button.interface.js";
-import Menu, { Item as MenuItem } from 'rc-menu';
 
 
 
+/*
+	FilterButton is the component that allows you to filter the job list by company name.
+		- Was used the rc-dropdown library to create the dropdown list
+		- Was used the react-icons library to implement the icons
+		- Only receive one jobs prop, and its a list of jobs
 
+	State and functions: 
+		- isDropDownVisible -> State that determines is the dropdown list is visible or not
+		- onSelect -> function that is called when one dropdown item is selected
+		- onVisibleChange -> function that is called when the dropdown list visible is changed
+	
+	Inside the DropMenu, the jobs list is filtered removing all duplicated companies names, and returned as DropItem
+*/
 const FilterButton: React.FC<IFilterButton> = ({jobs, filterParam}) => {
 	const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
@@ -51,13 +62,9 @@ const FilterButton: React.FC<IFilterButton> = ({jobs, filterParam}) => {
 				animation="slide-up"
 				overlay={menuCallback}
 				onVisibleChange={onVisibleChange}
-				//placement={"bottomLeft"}
-				//getPopupContainer={() => ContainerRef.current ? Containe;rRef.current : document.body}
-
-				
 			>
 			<Container>
-				<h1>Order by name</h1>
+				<h1>filter company</h1>
 				{
 					isDropDownVisible ? <IoChevronUpOutline className="arrow"/> : <IoChevronDownOutline className="arrow"/>
 				}

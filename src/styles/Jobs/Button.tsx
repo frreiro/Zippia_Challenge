@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Menu, { Item as MenuItem } from 'rc-menu';
 
-
 const Container = styled.div`
 	width: 130px;
 	height: 20px;
